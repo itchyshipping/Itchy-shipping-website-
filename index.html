@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Itchy Shipping Agency</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#333;
+    scroll-behavior:smooth;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 40px;
+    border-bottom:3px solid #e91e63;
+}
+
+.logo{ width:90px; }
+
+.company-name{
+    font-size:22px;
+    font-weight:bold;
+    color:#e91e63;
+}
+
+/* NAV */
+nav{
+    background:#fff0f6;
+    text-align:center;
+    padding:12px;
+}
+
+nav a{
+    margin:0 20px;
+    text-decoration:none;
+    color:#e91e63;
+    font-weight:bold;
+}
+
+/* SECTIONS */
+section{
+    padding:90px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+h2{
+    color:#e91e63;
+    text-align:center;
+    margin-bottom:50px;
+}
+
+/* ================= FLEET SECTION ================= */
+
+#fleet{ background:#fafafa; }
+
+.fleet-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:35px;
+}
+
+.fleet-card{
+    background:white;
+    border-radius:16px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    overflow:hidden;
+    transition:0.3s ease;
+}
+
+.fleet-card:hover{
+    transform:translateY(-8px);
+}
+
+.fleet-card img{
+    width:100%;
+    height:auto;
+    object-fit:cover;
+}
+
+.fleet-card h3{
+    color:#e91e63;
+    padding:20px 20px 0 20px;
+}
+
+.fleet-card ul{
+    padding:15px 40px 30px 40px;
+    line-height:1.8;
+}
+
+/* ===== Scroll Animation ===== */
+
+.reveal-left{
+    opacity:0;
+    transform:translateX(-80px);
+    transition: all 0.9s ease;
+}
+
+.reveal-right{
+    opacity:0;
+    transform:translateX(80px);
+    transition: all 0.9s ease;
+}
+
+.reveal-left.active,
+.reveal-right.active{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* FOUNDER */
+.founder-img{
+    width:100%;
+    max-width:520px;
+    display:block;
+    margin:40px auto;
+    border-radius:16px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.18);
+}
+
+.founder-name{
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.founder-title{
+    text-align:center;
+    color:#e91e63;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.founder-desc{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+}
+
+/* FOOTER */
+footer{
+    background:#f5f5f5;
+    text-align:center;
+    padding:30px;
+    margin-top:60px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" class="logo" alt="Company Logo">
+    <div class="company-name">Itchy Shipping Agency</div>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#fleet">Fleet</a>
+    <a href="#founder">Founder</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>Welcome</h2>
+    <p style="text-align:center;">
+        Itchy Shipping Agency provides reliable and professional 
+        transportation and shipping coordination services.
+        We operate with integrity, punctuality, and dedication 
+        to ensure every delivery meets client expectations.
+    </p>
+</section>
+
+<section id="fleet">
+    <h2>Fleet Operational Standards</h2>
+
+    <div class="fleet-grid">
+
+        <div class="fleet-card reveal-left">
+            <img src="assets/images/fleet/vehicle.jpg" alt="Vehicle Inspection">
+            <h3>Vehicle Standards</h3>
+            <ul>
+                <li>Daily inspection before departure</li>
+                <li>No dashboard warning indicators</li>
+                <li>Complete safety equipment onboard</li>
+                <li>Valid registration & insurance</li>
+            </ul>
+        </div>
+
+        <div class="fleet-card reveal-right">
+            <img src="assets/images/fleet/driver.jpg" alt="Professional Driver">
+            <h3>Driver Standards</h3>
+            <ul>
+                <li>Professional appearance</li>
+                <li>Zero alcohol policy</li>
+                <li>Client communication protocol</li>
+                <li>Status reporting at checkpoints</li>
+            </ul>
+        </div>
+
+        <div class="fleet-card reveal-left">
+            <img src="assets/images/fleet/safety.jpg" alt="Fleet Safety">
+            <h3>Safety Protocol</h3>
+            <ul>
+                <li>Speed regulation compliance</li>
+                <li>No mobile phone usage</li>
+                <li>Mandatory rest on long routes</li>
+                <li>Accident prevention monitoring</li>
+            </ul>
+        </div>
+
+        <div class="fleet-card reveal-right">
+            <img src="assets/images/fleet/cargo.jpg" alt="Cargo Handling">
+            <h3>Cargo Handling</h3>
+            <ul>
+                <li>Balanced load distribution</li>
+                <li>Professional securing system</li>
+                <li>Weather protection coverage</li>
+                <li>Digital proof of delivery</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section id="founder">
+    <h2>Founder</h2>
+
+    <img src="founder.jpg" class="founder-img" alt="Founder">
+
+    <div class="founder-name">
+        Mr. Aitirit Pudkampra
+    </div>
+
+    <div class="founder-title">
+        Founder & Managing Director
+    </div>
+
+    <div class="founder-desc">
+        Former maritime operations professional with hands-on experience in 
+        commercial vessel operations and port coordination. 
+        With practical field expertise and a strong commitment to responsibility, 
+        he established Itchy Shipping Agency to deliver reliable, efficient, 
+        and trustworthy shipping support services.
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">
+        Email: contact@itchyshipping.com<br>
+        Phone: (Available soon)
+    </p>
+</section>
+
+<footer>
+    © 2026 Itchy Shipping Agency. All rights reserved.
+</footer>
+
+<script>
+function revealOnScroll(){
+    const elements = document.querySelectorAll(".reveal-left, .reveal-right");
+    elements.forEach(el=>{
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        if(elementTop < windowHeight - 100){
+            el.classList.add("active");
+        }
+    });
+}
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
+</body>
+</html>

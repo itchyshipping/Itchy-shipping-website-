@@ -155,7 +155,17 @@ footer{
 }
 </style>
 </head>
+<div style="text-align:center; margin-top:20px;">
+   All visiting: <span id="visitor-count">Loading...</span>
+</div>
 
+<script>
+fetch('https://api.countapi.xyz/hit/itchyshipping.com/visits')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('visitor-count').innerText = data.value;
+  });
+</script>
 <body>
 
 <header>

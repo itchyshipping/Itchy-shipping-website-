@@ -155,17 +155,7 @@ footer{
 }
 </style>
 </head>
-<div style="text-align:center; margin-top:20px;">
-   All visiting: <span id="visitor-count">Loading...</span>
-</div>
 
-<script>
-fetch('https://api.countapi.xyz/hit/itchyshipping.com/visits')
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('visitor-count').innerText = data.value;
-  });
-</script>
 <body>
 
 <header>
@@ -290,6 +280,19 @@ function revealOnScroll(){
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 </script>
+<div style="text-align:center; padding:20px 0; font-size:14px; color:#666;">
+  👀 Total visitors: <span id="visitor-count">0</span>
+</div>
 
+<script>
+fetch('https://api.countapi.xyz/hit/itchyshipping/visits')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('visitor-count').innerText = data.value;
+  })
+  .catch(() => {
+    document.getElementById('visitor-count').innerText = "-";
+  });
+</script>
 </body>
 </html>
